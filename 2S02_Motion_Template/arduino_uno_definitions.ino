@@ -20,4 +20,4 @@
 
 uint8_t null_register; //we use this in cases where there isn't a valid register to write to, like for pin 0 (which doesn't exist).
 const uint8_t UNO_PINS[14] = {PD0, PD1, PD2, PD3, PD4, PD5, PD6, PD7, PB0, PB1, PB2, PB3, PB4, PB5};
-const uint8_t *UNO_PORTS[14] = {&PORTD, &PORTD, &PORTD, &PORTD, &PORTD, &PORTD, &PORTD, &PORTD, &PORTB, &PORTB, &PORTB, &PORTB, &PORTB};
+const uint8_t *UNO_PORTS[14] = {&PORTD, &PORTD, &PORTD, &PORTD, &PORTD, &PORTD, &PORTD, &PORTD, &PORTB, &PORTB, &PORTB, &PORTB, &PORTB, &PORTB};
