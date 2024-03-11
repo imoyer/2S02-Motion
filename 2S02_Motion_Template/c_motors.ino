@@ -137,7 +137,7 @@ uint8_t motor_is_moving(struct motor *motor_target){
   }
 }
 
-uint8_t motor_any_moving(){
+uint8_t motor_are_any_moving(){
   // Returns 1 if any motor is moving, otherwise 0 if idle.
   int motor_index;
   for(motor_index = 0; motor_index < MOTOR_COUNT; motor_index ++){
@@ -146,6 +146,16 @@ uint8_t motor_any_moving(){
     };
   }
   return 0;
+}
+
+uint8_t motor_wait_for_all_idle(){
+  //blocks until all motors are idle
+  while(motor_are_any_moving()){};
+}
+
+uint8_t motor_wait_for_idle(struct motor *motor_target){
+  //blocks until a specific target motor is idle
+  while(motor_is_moving(motor_target)){};
 }
 
 // --- INTERNAL USE MOTOR FUNCTIONS ---
@@ -262,6 +272,7 @@ void motor_initialize(struct motor *motor_target){
 
   //3. Initialize step and direction pins as outputs
   pinMode(motor_target->MOTOR_STEP_PIN, OUTPUT);
+  _delay_us(1);
   pinMode(motor_target->MOTOR_DIR_PIN, OUTPUT);
 }
 

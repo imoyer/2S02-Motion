@@ -14,8 +14,3 @@ const uint8_t PIN_Y_DIR   = 6;
 
 const uint8_t PIN_Z_STEP  = 4;
 const uint8_t PIN_Z_DIR   = 7;
-
-// -- CONTROL BUTTONS --
-const uint8_t PIN_BUTTON_FORWARD = A0;
-const uint8_t PIN_BUTTON_REVERSE = A1;
-const uint8_t PIN_SPEED_KNOB = A2;
