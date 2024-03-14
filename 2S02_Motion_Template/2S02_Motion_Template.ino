@@ -11,7 +11,6 @@
 
 void setup() {
   motors_initialize();
-  pinMode(8, OUTPUT);
   your_setup();
 }
 
