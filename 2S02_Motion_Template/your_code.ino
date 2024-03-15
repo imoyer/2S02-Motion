@@ -22,7 +22,3 @@ void your_loop(){ // put your code here, to run in a loop forever
   }
 }
 
-motor_move_relative_synchronous(struct motor &motor_a, 399, 580, 100);
-motor_move_relative_synchronous(struct motor &motor_b, 400, 580, 100);
-motor_wait_for_all_idle();
-
